@@ -1,0 +1,1 @@
+print((int(input("Digite o raio do circulo:"))**2)*3.14)

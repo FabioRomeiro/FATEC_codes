@@ -1,0 +1,22 @@
+  Algoritmo tipo_de_triangulo:
+  inicio
+    var l1,l2,l3
+
+    escreva("Entre com os tres lados de um triangulo:")
+    leia(l1)
+    leia(l2)
+    leia(l3)
+    escreva("O triangulo é")
+    se l1==l2 e l2==l3 e l1==l3 então
+      escreva("equilátero");
+    senão
+      se l1!=l2 e l2!=l3 e l1!=l3 então
+        escreva("escaleno")
+      senão
+        se l1==l2 e l1!=l3 ou
+           l1==l3 e l1!=l2 ou
+           l2==l3 e l2!=l1 então
+           escreva("isóceles")
+       fim-se
+    fim-se
+  fim

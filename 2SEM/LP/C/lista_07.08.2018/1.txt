@@ -1,0 +1,8 @@
+Algoritmo quadrado_perimetro_area:
+  inicio
+    var lado;
+
+    escreva("Entre com o lado do quadrado em metros:")
+    leia(lado)
+    escreva("O perímetro do quadrado é de " + lado*4 +" e a área é de "+ lado*lado +"m²")
+  fim

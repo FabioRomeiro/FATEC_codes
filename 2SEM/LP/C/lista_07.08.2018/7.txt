@@ -1,0 +1,11 @@
+Algoritmo imc:
+inicio
+  var altura, peso
+
+  escreva("Entre com sua altura:")
+  leia(altura)
+  escreva("Entre com seu peso:")
+  leia(peso)
+
+  escreva("Seu IMC é de " + peso/altura^2)
+fim

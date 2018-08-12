@@ -1,0 +1,1 @@
+print(input("Entre com um numero de 3 digitos: ")[::-1])

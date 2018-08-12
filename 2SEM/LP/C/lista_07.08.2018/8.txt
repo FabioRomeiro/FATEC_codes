@@ -1,0 +1,13 @@
+Algoritmo divisao:
+inicio
+  var a, b, x
+
+  escreva("Insira o valor de A:")
+  leia(a)
+  escreva("Insira o valor de B:")
+  leia(b)
+
+  x = -b/a
+
+  escreva("O valor de X é " + x)
+fim

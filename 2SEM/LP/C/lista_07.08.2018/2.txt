@@ -1,0 +1,9 @@
+Algoritmo retangulo_perimetro_area:
+  inicio
+    var largura, altura
+    escreva("Entre com a altura do retangulo em metros:")
+    leia(altura)
+    escreva("Entre com a largura do retangulo em metros:")
+    leia(largura)
+    escreva("O perimetro do retangulo é de "+(largura*2 + altura*2)+"m e a área é de "+(altura*largura)+"m²")
+  fim

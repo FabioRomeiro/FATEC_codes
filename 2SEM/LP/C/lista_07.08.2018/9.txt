@@ -1,0 +1,19 @@
+Algoritmo divisao:
+inicio
+  var a, b, c, d, x1, x2
+
+  escreva("Insira o valor de A:")
+  leia(a)
+  escreva("Insira o valor de B:")
+  leia(b)
+  escreva("Insira o valor de C:")
+  leia(c)
+
+  d = b^2 - (4*a*c)
+
+  x1 = (-b + raiz(d))/(2*a)
+  x2 = (-b - raiz(d))/(2*a)
+
+  escreva("O valor de X1 é " + x1)
+  escreva("O valor de X2 é " + x2)
+fim
