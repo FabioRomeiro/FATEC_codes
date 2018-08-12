@@ -1,0 +1,19 @@
+1º  Exercício: Crie  um algoritmo e um programa a em C que leia o tamanho do lado de um quadrado e calcule o perímetro e área, imprimindo o resultado na tela
+
+2º - Exercício: Crie um algoritmo e um programa em C que leia a largura e o comprimento de um retângulo e calcule o perímetro e área, imprimindo o resultado na tela.
+
+3º - Exercício: Crie um algoritmo e um programa em C que leia a medida dos três lados de um triângulo e calcule o perímetro e área, imprimindo o resultado na tela.
+
+4º - Exercício: Crie um algoritmo e um programa em C que leia a medida dos três lados de um triângulo e determine se o perímetro é maior que 10, imprimindo o resultado na tela.
+
+5º - Exercício: Crie   um algoritmo e um programa em C que leia a medida dos três lados de um triângulo e determine se o triângulo é equilátero, isósceles ou escaleno, imprimindo o resultado na tela.
+
+6º - Exercício: Crie  um algoritmo e um programa em C que leia a medida dos três lados de um triângulo e determine se o triângulo é acutângulo, obtusângulo ou retângulo, imprimindo o resultado na tela.
+
+7º - Exercício: Crie   um algoritmo e um programa em C que leia peso e altura de uma pessoa e calcule o IMC, imprimindo o resultado na tela.
+
+8º - Exercício: Crie um algoritmo e um programa em C que leia os coeficientes a e b de uma função de 1º grau e calcule x para y=0 ( y=ax+b), imprimindo o resultado na tela.
+
+9º - Exercício: Crie um algoritmo e um programa em C que leia os coeficientes a, b e c de uma função de 2º grau e calcule x para y=0, imprimindo o resultado na tela.
+
+10º - Exercício: Crie o fluxograma e o programa em C que leia o tamanho do raio de um círculo do e calcule o perímetro e área, imprimindo o resultado na tela.
