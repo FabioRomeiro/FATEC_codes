@@ -1,0 +1,90 @@
+Tarefa: funções
+  Faça os exercícios descritos, usando linguagem de programação C. Nomeie cada um dos programas como programa1, programa 2, etc. Em seguida, poste um arquivo chamado seu_nome.zip, contendo os códigos, isto é, programa1.c, programa 2.c..., bem como arquivos de texto. Importante: Não esqueça de acrescentar ao final de cada código da função main uma das instruções:
+
+system("pause");
+
+getch();
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+1) Considerando o programa Quadrado apresentado em sala de aula, pede-se:
+  a) fazer proteção para que somente números inteiros sejam permitidos como entrada para o lado do quadrado
+  b) acrescentar as seguintes funções:
+    b1) int area_maior_10 (int lado), que retorna 1, se área maior que 10, senão retorna 0;
+    b2) void perim_menor_10 (int lado), que escreve na tela se o perímetro do quadrado é menor ou maior que 10.
+
+
+2) Faça um programa que apresente o menu de opções a seguir e permita ao usuário escolher a opção desejada, mostrando o seu resultado final. Verifique a possibilidade de opção inválida ou inexistente. Dica: use switch case.
+  Menu de Opções
+    A- Imposto
+    B- Novo salário
+    C- Classificação
+  Atenção: Cada opção deve ser implementada em uma função diferente.
+
+  A opção A deverá receber o salário de um funcionário, calcular e apresentar o valor do imposto de renda mensal, usando regras descritas em:
+  http://idg.receita.fazenda.gov.br/acesso-rapido/tributos/irpf-imposto-de-renda-pessoa-fisica
+
+  Confira se o resultado está coerente com:
+
+  http://www.receita.fazenda.gov.br/Aplicacoes/ATRJO/Simulador/simulador.asp?tipoSimulador=M
+
+  A opção B deverá receber o salário de um funcionário, calcular e mostrar o valor do novo salário, usando as regras a seguir:
+                          SALÁRIO               AUMENTO (%)
+  Maiores que  |   R$ 15000,00               |     10%
+  De           |   R$ 7500,00 a R$ 15000,00  |     20%
+  De           |   R$ 1000,00 a R$ 7500,00   |     30%
+  Menores que  |   R$1000,00                 |     40%
+
+  A opção C receberá o salário de um funcionário e mostrará a sua classificação usando a relação a seguir:
+               SALÁRIO CLASSIFICAÇÃO
+    Até          |  R$ 7000,00  |  Mal remunerado
+    Maiores que  |  R$ 7000,00  |  Bem remunerado
+
+
+3) Faça um programa que leia, via teclado, cinco números inteiros, calcule e mostre, conforme escolha do usuário:
+  a) O maior número dentre eles;
+  b) O menor número dentre eles.
+  c) a média aritmética entre eles;
+  d) a mediana entre eles;
+  e) a moda entre eles.
+Use uma função para cada item.
+
+
+4) Um veículo tem um certo consumo de combustível (medidos em km / litro) e uma certa quantidade de combustível no tanque. O consumo é especificado em uma constante e o nível de combustível inicial é 0. Implemente um programa contenha as seguintes funções:
+  a) void andar( ) que simula o ato de dirigir o veículo por uma certa distância, reduzindo o nível de combustível no tanque de gasolina;
+  b) float obterGasolina( ), que retorna o nível atual de combustível;
+  c) adicionarGasolina(float litros), para abastecer o tanque.
+O programa deve apresentar um menu de opções que permita ao usuário escolher a opção desejada.
+
+
+5) Faça um programa que contenha as seguintes características
+  a) variáveis -> char nome[20], int idade, float peso e float altura
+  b) funções -> void envelhecer(int anos), void engordar(float kg), void emagrecer(float kg), void crescer(),
+  float Imc (float peso,  float altura)
+Obs: Por padrão, a cada ano que a pessoa envelhece, sendo a idade dela menor que 21 anos, ela deve crescer 0,5 cm.
+A função main fornecerá um menu para que o usuário escolha a opção desejada.
+
+
+6) Faça um programa, descritor de uma bomba de combustível, que contenha as seguintes características
+
+  a) variáveis -> char tipoCombustivel, float valorLitro, float quantidadeCombustivel
+
+  b) funções ->
+    b1. void abastecerPorValor(float valor) – dado o valor a ser abastecido, mostra a quantidade de litros de combustível que foi colocada no veículo;
+    b2. void abastecerPorLitro(float litros) – dada a quantidade em litros de combustível, mostra o valor a ser pago pelo cliente.
+    b3. void alterarValor( loat valor) – altera o valor do litro do combustível.
+    b4. void alterarCombustivel(char c) – altera o tipo do combustível.
+    b5. void alterarQuantidadeCombustivel( ) – altera a quantidade de combustível restante na bomba.
+OBS: Sempre que acontecer um abastecimento é necessário atualizar a quantidade de combustível total na bomba.
+A função main fornecerá um menu para que o usuário escolha a opção desejada.
+
+
+
+7) Faça um programa que contenha um menu com as seguintes opções:
+  (a) Ler uma string S1 (tamanho máximo 20 caracteres);
+  (b) Imprimir o tamanho da string S1;
+  (c) Comparar a string S1 com uma nova string S2 fornecida pelo usuário e imprimir o resultado da comparação;
+  (d) Concatenar a string S1 com uma nova string S2 e imprimir na tela o resultado da concatenação;
+  (e) Imprimir a string S1 de forma reversa;
+  (f) Contar quantas vezes um dado caractere aparece na string S1. Esse caractere desse ser informado pelo usuário;
+  (g) Substituir a primeira ocorrência do caractere C1 da string S1 pelo caractere C2. Os caracteres C1 e C2 serão lidos via teclado.

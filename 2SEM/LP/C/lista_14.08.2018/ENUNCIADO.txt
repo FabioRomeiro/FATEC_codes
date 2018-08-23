@@ -1,0 +1,7 @@
+a) Acessar  o link
+
+http://www.facom.ufu.br/~backes/wordpress/ListaC02.pdf
+
+e gerar em linguagem de programação  C os 40  primeiros programas  pedidos no link.
+
+b) Em seguida, escolha 5 programas do item (a) e gere um código que forneça um menu para que o usuário escolha qual programa ele quer rodar.
