@@ -1,0 +1,151 @@
+“Não zombes de um homem que está na aflição, pois há alguém que humilha
+e exalta: DEUS que tudo vê” – Eclesiástico 7, 12.
+
+1 - Observe o código a seguir e resolva os itens correspondentes:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int comparacao(int S1, int S2) {
+  int flag=2;
+
+  if (S1 < S2) flag=0;
+  if (S1 > S2) flag=1;
+
+  return flag;
+}
+
+void main() {
+  int grupo, i, pos, v[12];
+
+  srand ((unsigned) time(NULL));
+  pos=rand()%12;
+
+  for(i=0;i<12;i++)
+    if(i!=pos) v[i]=5;
+    else v[i]=4;
+
+  grupo=4;
+  i=grupo*comparacao(v[0]+v[1]+v[2]+v[3],v[4]+v[5]+v[6]+v[7]);
+  grupo=2;
+  i=i+grupo*comparacao(v[i]+v[i+1],v[i+2]+v[i+3]);
+
+  printf("\nA bolinha com menor peso esta na posição: %d",i+comparacao(v[i],v[i+1]));
+  printf("\n\n*******************\n");
+
+  for(i=0;i<12;i++) printf("v[%d] = %d\t",i,v[i]);
+
+  getch();
+}
+
+Supondo pos=6, faça o teste de mesa para as variáveis v[12], i, S1,S2 e
+flag, construindo uma tabela que mostre passo-a-passo o valor de cada variável.
+
+
+2-Elabore um programa que lê cinco letras, guarde-as em um vetor e
+depois escreva-as em ordem alfabética. Simule o teste de mesa para ele e faça o
+respectivo fluxograma.
+
+
+3 - Observe o código a seguir.
+
+void aleatorios() {
+
+  int n,i,j,k,g;
+  int sort[10];
+
+  for(i=0;i<10;i++) sort[i]=10;
+
+  k=0;
+  for(i=0;i<10;i++) {
+    g=0;
+
+    while (g==0) {     // um número randômico
+      qualquer entre 0 e 9
+      n =(rand()%10);
+
+      for(j=0;j<10;j++) {if (sort[j]==n)k=1;}
+
+      // se o número for válido, ficará armazenado no vetor
+      if (k==0) {
+        sort[i]=n;
+        printf("%d",n);
+        printf("\n");
+        g=1;
+      } else k=0;
+
+    }
+  }
+}
+
+main() {
+  //inicia a geração de números randômicos a partir de hora do sistema
+  srand ((unsigned) time(NULL));
+
+  aleatorios();
+
+  getch();
+}
+
+Responda:
+a) O que faz esse programa?
+b) Quais funções foram implementadas nesse código e o que elas fazem?
+c) Existe variável global nesse código? Se sim, quais? Para que elas
+foram declaradas como globais?
+d)Modifique a função main() de forma que o programa pergunte ao usuário
+se ele deseja continuar a execução do programa e, em caso afirmativo, o
+programa permite que o usuário reinicie o ciclo.
+
+
+4- Explique o significado de cada ocorrência de * no fragmento de
+código a seguir e indique qual a saída exibida na tela.
+
+int *p, x=5;
+
+*p *= 2**p;
+
+printf("%d", x);
+
+
+5- Faça um programa que contenha as seguintes funcionalidades:
+a) Leitura de CPF;
+b) Validação de CPF;
+c) Alteração de CPF.
+
+
+6- Dado o programa a seguir, determine o que aparecerá na tela.
+#include <stdio.h>
+#include <conio.h>
+main() {
+  int i;
+  char *pont1;
+  char letra='s';
+  char v[4][8]={"verde","amarelo","azul","branco"};
+  char *pont[]={"Bianca","Arnaldo","Catarina","Beto"};
+
+  pont1=&v[1][0];
+  printf("%c\t", *pont1);
+  printf("%p\n", pont1);
+
+  pont1++;
+  printf("%c\t", *pont1);
+  printf("%x\n", pont1);
+
+  pont1++;
+  printf("%c\t", *pont1);
+  printf("%p\n", pont1);
+
+  pont1=&letra;
+  printf("%c\t", *pont1);
+  printf("%p\n", pont1);
+  printf("%s\n",pont[0]);
+  printf("%c\n",*pont[0]);
+  printf("%s\n",pont[1]);
+
+  pont[0]++;
+  printf("%s\n",pont[0]);
+
+  //puts(*pont1);
+  getch();
+}
