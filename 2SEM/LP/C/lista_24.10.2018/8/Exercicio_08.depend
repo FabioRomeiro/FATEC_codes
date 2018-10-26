@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1540509984 source:c:\users\danny\desktop\nova pasta\exercicio_08\main.c
+	"Funcoes.h"
+
+1540509984 source:c:\users\danny\desktop\nova pasta\exercicio_08\funcoes.c
+	"Funcoes.h"
+
+1540509984 c:\users\danny\desktop\nova pasta\exercicio_08\funcoes.h
+	<stdio.h>
+	<string.h>
+	<conio.h>
+

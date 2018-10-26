@@ -1,0 +1,122 @@
+1– Considere as alíquotas de IR vigentes, de acordo com o site
+  http://idg.receita.fazenda.gov.br/acesso-rapido/tributos/irpf-imposto-de-renda-pessoa-fisica#calculo_mensal_IRPF.
+  Elabore um programa, usando Linguagem de Programação C, que calcule o valor do imposto total para
+  qualquer valor de rendimento tributável, considerando possíveis deduções.
+
+-----------------------------------------------------------------------------------------
+
+2- O mágico descobre, com a força do seu pensamento, duas cartas escolhidas aleatoriamente pelo
+  espectador.
+
+  MATERIAL NECESSÁRIO
+  Um baralho retirando-se do maço as cartas dez, valete, dama e rei de todos os nipes.
+
+  SEGREDO
+  a- Peça para o espectador escolher uma carta qualquer e memorizá-la.
+  b- Peça para ele multiplicar por dois o valor da carta, mentalmente.
+  c- Somar cinco e depois multiplicar por cinco.
+  d- Peça para memorizar o resultado da conta.
+  e- Agora, peça para escolher outra carta e somar o valor dela com o primeiro valor
+  memorizado, ou seja, o resultado da conta.
+  f- Peça para ele falar o valor total. Desse valor, subtraia 25, com resultado de dois algarismos
+  você descobrirá o valor das duas cartas pensadas.
+
+  (Ex: se o valor total foi 76, menos 25, é igual a 51, a primeira carta escolhida foi o número
+  5, e a segunda carta escolhida foi o número 1, ou seja, o ás.)
+
+  Elabore um programa, usando Linguagem de Programação C, que simule o truque de ilusionismo
+  descrito acima. O programa dará as instruções ao usuário e lerá via teclado apenas o valor_total,
+  apresentando, em seguida, os dois números escolhidos pelo usuário.
+
+-----------------------------------------------------------------------------------------
+
+3- Observe as instruções desse truque de Ilusionismo.
+
+Peça que a pessoa siga estas instruções
+
+Anotar mês de nascimento (Exemplo de Fevereiro): 2
+Duplicá-lo: 4
+Adicionar 5: 9
+Multiplicar por 50: 450
+Adicionar idade do amigo (Exemplo 40): 490
+Subtrair 365: 125
+
+Neste ponto, pergunte à pessoa para dizer o valor total, o que, neste caso, é de 125.
+
+Na sua cabeça, de forma rápida e secretamente adicionar 115.
+Neste exemplo, você vai acabar com 240.
+
+Em seguida, proclame: "Você nasceu em fevereiro e tem 40 anos de idade. "
+
+Elabore um programa, usando Linguagem de Programação C, que simule o truque de ilusionismo
+descrito acima. O programa dará as instruções ao usuário e lerá via teclado apenas o valor_total,
+apresentando, em seguida, o mês de nascimento e a idade da pessoa.
+
+-----------------------------------------------------------------------------------------
+
+4- Usando o programa do WiFi apresentado em aula, melhore-o de forma que ele leia  três
+roteadores e calcule se algum deles permite que seu sinal seja captado por um dispositivo na
+posição (x,y)
+
+-----------------------------------------------------------------------------------------
+
+5-Uma maternidade deseja cadastrar os nascimentos ocorridos. Usando a linguagem C e struct,
+implemente:
+
+a) uma função de cadastro capaz de armazenar nome da criança, nome do pai, nome da mãe,
+dia, mês, ano e hora de nascimento, massa e altura do recém-nascido.
+
+b) uma função que lista os nomes de todos os bebês nascidos em uma determinada data,
+passada como parâmetro.
+
+c) uma função que lista os nomes de todos os bebês que nasceram com massa abaixo de determinado
+valor passado como parâmetro;
+
+d)uma função que lista os nomes de todos os bebês que nasceram com massa acima dede determinado
+valor passado como parâmetro;
+
+e) main(): oferece menu para o usuário escolher a operação desejada.
+
+-----------------------------------------------------------------------------------------
+
+6-Uma igreja deseja cadastrar os casamentos ocorridos. Usando a linguagem C e struct, implemente:
+
+a) uma função de cadastro capaz de armazenar nome da noiva, nome do noivo, nomes do pai e da
+mãe de cada cônjuge, dia, mês, ano e hora da cerimônia.
+
+b) uma função que lista todas as cerimônias ocorridas em uma determinada data, passada como
+parâmetro.
+
+c) uma função que fornece o nome do futuro cônjuge, a partir do nome de um dos nubentes.
+
+d)  uma função que fornece a data e o horário da cerimônia, a partir dos nomes dos noivos.
+
+e) main(): oferece menu para o usuário escolher a operação desejada.
+
+-----------------------------------------------------------------------------------------
+
+7- Use estrutura
+
+typedef struct
+
+{
+
+char nome[31];
+
+int idade;
+
+} PESSOA;
+
+e elabore um programa para cadastrar 10 pessoas.
+
+-----------------------------------------------------------------------------------------
+
+8- Crie um programa, utilizando um vetor de struct que guarda o nome, RG e ano de nascimento
+de no máximo, 10 pessoas. O programa permite as seguintes funcionalidades, conforme escolha do usuário:a - Cadastrar uma pessoa;b - Calcular a idade de uma pessoa selecionada pelo usuário;c - Listar pessoas que nasceram a partir de um determinado ano;d - Listar pessoas que nasceram antes de um determinado ano;e- Encontrar o nome de uma pessoa com determinado RG;s- Sair.O programa deverá ser executado em loop até o usuário digitar a opção s. Implemente funçõespara as opções disponíveis
+
+-----------------------------------------------------------------------------------------
+
+9-Faça um programa que use uma estrutura para armazenar os atributos de uma circunferência
+C, isto é, raio e centro. O programa deve permitir as seguintes funcionalidades:
+  a) calcular comprimento da circunferência
+  b) calcular a área do círculo envolto pela circunferência. Use funções.
