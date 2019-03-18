@@ -19,9 +19,7 @@ public class Turma {
     }
 
     public Aluno alterarDadosDoAlunoPorMatricula(int matricula, String campo, String novoDado) {
-
-
-
+        
         Aluno aluno = getAlunoByMatricula(matricula);
 
         if (aluno == null) {
