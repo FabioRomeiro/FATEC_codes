@@ -230,6 +230,33 @@ ex2/fast:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/3.c.s
 .PHONY : 3.c.s
 
+vtol.o: vtol.c.o
+
+.PHONY : vtol.o
+
+# target to build an object file
+vtol.c.o:
+	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/vtol.c.o
+.PHONY : vtol.c.o
+
+vtol.i: vtol.c.i
+
+.PHONY : vtol.i
+
+# target to preprocess a source file
+vtol.c.i:
+	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/vtol.c.i
+.PHONY : vtol.c.i
+
+vtol.s: vtol.c.s
+
+.PHONY : vtol.s
+
+# target to generate assembly for a file
+vtol.c.s:
+	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/vtol.c.s
+.PHONY : vtol.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -250,6 +277,9 @@ help:
 	@echo "... 3.o"
 	@echo "... 3.i"
 	@echo "... 3.s"
+	@echo "... vtol.o"
+	@echo "... vtol.i"
+	@echo "... vtol.s"
 .PHONY : help
 
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ex1.dir/1.c.o"
+  "CMakeFiles/ex1.dir/vtol.c.o"
   "ex1.pdb"
   "ex1"
 )

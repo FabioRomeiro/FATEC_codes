@@ -9,15 +9,14 @@
  */
 
 void describe(int n) {
-    if(n != 0) {
-        printf("%d\n", n);
-        describe(n-1);
-        if(n!=1)
-            printf("%d\n", n);
+    printf("%d ", n);
+    if (n!=0) {
+        describe(n - 1);
+        printf("%d ", n);
     }
 }
 
 int main() {
-    describe(24);
+    describe(5);
 }
 

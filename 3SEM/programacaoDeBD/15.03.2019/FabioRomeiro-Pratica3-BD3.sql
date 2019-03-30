@@ -19,7 +19,12 @@ SELECT e.edi_cod, e.edi_descricao, l.liv_cod
 FROM Editora e, Livro l
 WHERE e.edi_cod = l.edi_cod;
 
--- 9 [TODO]
+-- 9
+SELECT l.liv_titulo, count(l.liv_cod) 
+FROM livro l INNER JOIN exemplar 
+ON ex.liv_cod=l.liv_cod 
+GROUP BY  l.liv_cod,l.liv_titulo 
+HAVING count(*)>3;
 
 -- 11 
 SELECT liv_titulo

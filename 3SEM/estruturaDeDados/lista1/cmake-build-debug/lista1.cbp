@@ -167,6 +167,9 @@
 		<Unit filename="/home/flromeiroc/personaldev/escola/FATEC_codes/3SEM/estruturaDeDados/lista1/cmake-build-debug/3.c">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/flromeiroc/personaldev/escola/FATEC_codes/3SEM/estruturaDeDados/lista1/vtol.c">
+			<Option target="ex1"/>
+		</Unit>
 		<Unit filename="/home/flromeiroc/personaldev/escola/FATEC_codes/3SEM/estruturaDeDados/lista1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
