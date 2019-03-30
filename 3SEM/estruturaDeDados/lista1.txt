@@ -1,0 +1,69 @@
+// Lista 1 Ex. 1
+int inverteInteiro(int n) {
+    printf("%d", n%10);
+    if(n/10 != 0)
+        inverteInteiro(n/10);
+}
+
+//Lista 1 Ex. 2
+void describe(int n) {
+    if(n != 0) {
+        printf("%d\n", n);
+        describe(n-1);
+        if(n!=1)
+            printf("%d\n", n);
+    }
+}
+
+//Lista 1 Ex. 3
+void inverterVetor(int v[], int n) {
+    if(n > 5) {
+        int aux = v[n-1];
+        v[n-1] = v[10-n];
+        v[10-n] = aux;
+        inverterVetor(v, n-1);
+    }
+}
+
+// Lista 2 da Lista 1 Ex. 1
+void concatena(CELULA** lista1, CELULA* lista2) { 
+    if (*lista1 == NULL) { 
+        *lista1 = lista2; 
+        return; 
+    }
+    CELULA* aux = *lista1; 
+    while (aux->prox != NULL) 
+        aux = aux->prox;  
+    aux->prox = lista2; 
+} 
+
+// Lista 2 da Lista 1 Ex. 2
+void removeRepetidos(CELULA** lista) { 
+    CELULA * aux = *lista;
+    CELULA * ant = NULL;
+    while (aux->prox != NULL) {
+        if(ant == NULL || ant->valor != aux->valor) {
+            ant = aux;
+            aux = aux->prox;
+        }
+        else if(ant->valor == aux->valor) {
+            aux = aux->prox;
+            ant->prox = aux;
+        }
+    }
+} 
+
+// Lista 2 da Lista 1 Ex. 3
+int* converte(int v[], int n) {
+    CELULA * lst = malloc(8);
+    lst->valor = v[0]; 
+    lst->prox = NULL;
+    CELULA * aux = lst; 
+    for(int i=1; i<n ; i++) {
+        CELULA * nova = malloc(8);
+        nova->valor = v[i];
+        aux->prox = nova;
+        aux = nova;
+    }
+    return aux;
+}
