@@ -60,23 +60,65 @@ CELULA* converte(int v[], int n) {
     }
     return aux;
 }
+
+CELULA *mergeListasOrdenadas(CELULA * lista1, CELULA* lista2) {
+    CELULA *aux = NULL;
+    CELULA *lista3 = NULL;
+
+    if (lista1->valor < lista2->valor) {
+        aux = lista1;
+        lista3 = aux;
+        lista1 = lista1->prox;
+    } else if(lista1->valor > lista2->valor){
+        aux = lista2;
+        lista3 = aux;
+        lista2 = lista2 -> prox;
+    } else if (lista1->valor == lista2->valor) {
+        aux = lista1;
+        aux->prox = lista2;
+        lista3 = aux;
+        lista1 = lista1->prox;
+        lista2 = lista2->prox;
+    }
+
+    while(lista1->prox != NULL && lista2->prox != NULL){
+       if (lista1->valor < lista2->valor) {
+            aux->prox = lista1;
+            lista1 = lista1->prox;
+              } else if(lista1->valor > lista2->valor){
+            aux->prox = lista2;
+            lista2 = lista2 -> prox;
+       } else if (lista1->valor == lista2->valor) {
+            aux->prox = lista1;
+            aux = aux->prox;
+            aux->prox = lista2;
+            lista1 = lista1->prox;
+            lista2 = lista2->prox;
+       }
+       aux = aux->prox;
+    }
+    if (lista1->prox == NULL) {
+        aux->prox = lista2;
+    } else if (lista2->prox == NULL) {
+        aux->prox = lista1;
+    }
+}
  
 int main() { 
     CELULA * lista = NULL; // Uma lista SEMPRE deve ser inicializada com NULL 
     CELULA * lista2 = NULL; 
-    insereNaLista(&lista, 8); 
-    insereNaLista(&lista, 5); 
-    insereNaLista(&lista, 10); 
-    insereNaLista(&lista, 851); 
+    insereNaLista(&lista, 1); 
+    insereNaLista(&lista, 2); 
+    insereNaLista(&lista, 3); 
+    insereNaLista(&lista, 4); 
  
  
-    insereNaLista(&lista2, 8789); 
-    insereNaLista(&lista2, 147); 
-    insereNaLista(&lista2, 123); 
-    insereNaLista(&lista2, 159);
-    
-    printaValores(converte(v,5)); 
- 
+    insereNaLista(&lista2, 4); 
+    insereNaLista(&lista2, 5); 
+    insereNaLista(&lista2, 5); 
+    insereNaLista(&lista2, 6);
+
+    printaValores(mergeListasOrdenadas(lista, lista2));
     // printf("Antes:\n"); 
     // printf("-> Lista 1:\n"); 
     // printaValores(lista); 
@@ -90,7 +132,7 @@ int main() {
     // printaValores(lista); 
     // printf("\n-> Lista 2:\n"); 
     // printaValores(lista2);
-
+/*
     int v[10] = {1,5,54,82,1,65,2,34,5,4};
     printf("\n VETOR: "); 
     printaVetor(v, 10);
@@ -99,5 +141,5 @@ int main() {
     printaVetor(v, 10);
     printf("\n");
     printaValores(converte(v,10));
- 
+ */
 }

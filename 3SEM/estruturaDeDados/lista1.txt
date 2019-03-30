@@ -1,28 +1,26 @@
 // Lista 1 Ex. 1
-int inverteInteiro(int n) {
-    printf("%d", n%10);
-    if(n/10 != 0)
-        inverteInteiro(n/10);
+void inverteInteiro(int x) {
+    printf("%d", x%10);
+    if(x/10 == 0) return;
+    inverteInt(x/10);
 }
 
 //Lista 1 Ex. 2
 void describe(int n) {
-    if(n != 0) {
-        printf("%d\n", n);
-        describe(n-1);
-        if(n!=1)
-            printf("%d\n", n);
+    printf("%d ", n);
+    if (n!=0) {
+        describe(n - 1);
+        printf("%d ", n);
     }
 }
 
 //Lista 1 Ex. 3
 void inverterVetor(int v[], int n) {
-    if(n > 5) {
-        int aux = v[n-1];
-        v[n-1] = v[10-n];
-        v[10-n] = aux;
-        inverterVetor(v, n-1);
-    }
+    if(n <= 50) return;
+    int aux = v[n-1];
+    v[n-1] = v[100-n];
+    v[100 - n] = aux;
+    inverterVetor(v, n - 1);
 }
 
 // Lista 2 da Lista 1 Ex. 1
@@ -66,4 +64,22 @@ int* converte(int v[], int n) {
         aux = nova;
     }
     return aux;
+}
+
+// Lista 2 da Lista 1 Ex. 4
+void intercala(CELULA * lista1, CELULA* lista2) {
+    CELULA *lista3 = lista1;
+    CELULA *aux = NULL;
+    CELULA *aux2 = NULL;
+    while(lista3->prox != NULL && lista2->prox != NULL){
+        aux = lista3->prox;
+        lista3 -> prox = lista2;
+        lista3 = lista3-> prox;
+        aux2 = lista3->prox;
+        lista3->prox = aux;
+        lista2 = aux2;
+    }
+    if (lista3->prox == NULL) {
+        lista3->prox = lista2;
+    }
 }
