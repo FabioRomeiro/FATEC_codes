@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/ex1.dir/1.c.o CMakeFiles/ex1.dir/vtol.c.o  -o ex1 

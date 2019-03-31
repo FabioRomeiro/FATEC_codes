@@ -61,64 +61,60 @@ CELULA* converte(int v[], int n) {
     return aux;
 }
 
-CELULA *mergeListasOrdenadas(CELULA * lista1, CELULA* lista2) {
-    CELULA *aux = NULL;
-    CELULA *lista3 = NULL;
-
-    if (lista1->valor < lista2->valor) {
-        aux = lista1;
-        lista3 = aux;
-        lista1 = lista1->prox;
-    } else if(lista1->valor > lista2->valor){
-        aux = lista2;
-        lista3 = aux;
-        lista2 = lista2 -> prox;
-    } else if (lista1->valor == lista2->valor) {
-        aux = lista1;
-        aux->prox = lista2;
-        lista3 = aux;
-        lista1 = lista1->prox;
-        lista2 = lista2->prox;
+int *ordenaSubvetores(int v[], int i, int h, int n) {
+    
+    int aux = h;
+    for(; i < n; i++) {
+        for(h = aux; h < n; h++) {
+            if(v[i] > v[aux]) {
+                int aux2 = v[i];
+                v[i] = v[h];
+                v[h] = aux2;
+            }
+        }
     }
 
-    while(lista1->prox != NULL && lista2->prox != NULL){
-       if (lista1->valor < lista2->valor) {
-            aux->prox = lista1;
-            lista1 = lista1->prox;
-              } else if(lista1->valor > lista2->valor){
-            aux->prox = lista2;
-            lista2 = lista2 -> prox;
-       } else if (lista1->valor == lista2->valor) {
-            aux->prox = lista1;
-            aux = aux->prox;
-            aux->prox = lista2;
-            lista1 = lista1->prox;
-            lista2 = lista2->prox;
-       }
-       aux = aux->prox;
-    }
-    if (lista1->prox == NULL) {
-        aux->prox = lista2;
-    } else if (lista2->prox == NULL) {
-        aux->prox = lista1;
-    }
+    return v;
 }
- 
-int main() { 
-    CELULA * lista = NULL; // Uma lista SEMPRE deve ser inicializada com NULL 
-    CELULA * lista2 = NULL; 
-    insereNaLista(&lista, 1); 
-    insereNaLista(&lista, 2); 
-    insereNaLista(&lista, 3); 
-    insereNaLista(&lista, 4); 
- 
- 
-    insereNaLista(&lista2, 4); 
-    insereNaLista(&lista2, 5); 
-    insereNaLista(&lista2, 5); 
-    insereNaLista(&lista2, 6);
 
-    printaValores(mergeListasOrdenadas(lista, lista2));
+int simulaInspecao() {
+    int horas = 8;
+    int minutosTotal = horas * 60;
+    
+    int qtdTv = 0;
+    int qtdTvsFixed = 0;
+    int tempoConsertando = 0;
+    for(int minutos = 1; minutos < minutosTotal; minutos++) {
+        if(tempoConsertando == 4) {
+            tempoConsertando = 0;
+            qtdTvsFixed++;
+            qtdTv--;
+        } 
+        if(minutos%3 == 0) {
+            qtdTv++;
+        }
+        if(qtdTv >= 1) {
+            tempoConsertando++;
+        }
+    }
+
+    return qtdTvsFixed;
+}
+
+int main() { 
+    // CELULA * lista = NULL; // Uma lista SEMPRE deve ser inicializada com NULL 
+    // CELULA * lista2 = NULL; 
+    // insereNaLista(&lista, 1); 
+    // insereNaLista(&lista, 2); 
+    // insereNaLista(&lista, 3); 
+    // insereNaLista(&lista, 4); 
+ 
+ 
+    // insereNaLista(&lista2, 1); 
+    // insereNaLista(&lista2, 2); 
+    // insereNaLista(&lista2, 3); 
+    // insereNaLista(&lista2, 4);
+
     // printf("Antes:\n"); 
     // printf("-> Lista 1:\n"); 
     // printaValores(lista); 
@@ -132,14 +128,22 @@ int main() {
     // printaValores(lista); 
     // printf("\n-> Lista 2:\n"); 
     // printaValores(lista2);
+
+    // printf("\n");
+    // int v[10] = {1,5,54,82,1,8,12,32,58,100};
+
+    // int esperado[10] = {1,1,5,8,12,32,54,58,82,100};
+    // printaVetor(ordenaSubvetores(v,0,4,10), 10);
+    // printf("\n");
+    // printaVetor(esperado,10);
+
+    int valor = simulaInspecao();
+    printf("%d", valor);
 /*
-    int v[10] = {1,5,54,82,1,65,2,34,5,4};
     printf("\n VETOR: "); 
     printaVetor(v, 10);
     inverterVetor(v,10);
     printf("\n VETOR: "); 
-    printaVetor(v, 10);
-    printf("\n");
     printaValores(converte(v,10));
  */
 }

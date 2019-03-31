@@ -1,0 +1,78 @@
+// Lista 2 Ex. 1
+
+void insereNaLista(CELULA ** lista, int valor) {
+    CELULA * aux = *lista;
+    CELULA * nova = malloc(8);
+    nova->valor = valor;
+    for(; aux->prox == NULL; aux = aux->prox);
+    aux -> prox = nova;
+}
+
+CELULA *intercalarListas(CELULA *lista1, CELULA *lista2) {
+    
+    CELULA * lista3 = NULL;
+    CELULA * aux = lista1;
+    CELULA * aux2 = lista2;
+    
+    while(aux != NULL && aux2 != NULL) {
+        if(aux->valor < aux2->valor) {
+            insereNaLista(&lista3, aux->valor);
+            aux = aux-> prox;
+        } else {
+            insereNaLista(&lista3, aux2->valor);
+            aux2 = aux2->prox;
+        }
+    }
+
+    while(aux != NULL) {
+        insereNaLista(&lista3, aux->valor);
+        aux = aux->prox;
+    }
+
+    while(aux2 != NULL) {
+        insereNaLista(&lista3, aux2->valor);
+        aux2 = aux2->prox;
+    }
+
+    return lista3;
+}
+
+// Lista 2 Ex. 2
+int *ordenaSubvetores(int v[], int i, int h, int n) {
+    int aux = h;
+    for(; i < n; i++) {
+        if(n >= aux)
+            h = i;
+        else
+            h = aux;
+        for(; h < n; h++) {
+            if(v[i] > v[h]) {
+                int aux2 = v[i];
+                v[i] = v[h];
+                v[h] = aux2;
+            }
+        }
+    }
+    return v;
+}
+
+// Lista 2 Ex. 3
+void separaP(int v[], int n, int p) {
+    int i = 0;
+    int f = n;
+
+    for(int j = 0; f >= i; j++) {
+        if(v[j] > p) {
+            int aux = v[j];
+            v[j] = v[f];
+            v[f] = aux;
+            f--;
+            j--;
+        } else if(v[j] < p) {
+            int aux = v[j];
+            v[j] = v[i];
+            v[i] = aux;
+            i++;
+        }
+    }
+}
