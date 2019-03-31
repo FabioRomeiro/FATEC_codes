@@ -9,4 +9,6 @@
 /home/flromeiroc/personaldev/escola/FATEC_codes/3SEM/estruturaDeDados/lista1/2.c
 stdio.h
 -
+stdlib.h
+-
 

@@ -1,73 +1,84 @@
-/*
-
- 3- Crie um programa em C que receba um vetor de números reais com 100 elementos.
- Escreva uma função recursiva que inverta ordem dos elementos presentes no vetor.
-
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct celula {
+/* 3ª Lista de Eestrutura de Dados
+ *
+ * 1 - Faça uma função que receba duas listas encadeadas L1 e L2 e retorne
+ * uma terceira lista L3 com a intercalação de L1 e L2.
+ */
+
+struct Cel {
     int valor;
-    struct celula *prox;
-} CELULA;
+    struct Cel *prox;
+};
 
-void concatena(CELULA** a, CELULA* b) {
-    if (*a == NULL) {
-        *a = b;
-        return;
+typedef struct Cel cel;
+
+
+void *inserir (cel **lista, int x) {
+    cel *temp = NULL, *aux = *lista;
+
+    temp = malloc(sizeof(cel));
+    temp->valor = x;
+    temp->prox = NULL;
+
+
+    if (*lista == NULL)
+        *lista = temp;
+    else {
+        for (; aux->prox != NULL; aux = aux->prox);
+        aux->prox = temp;
     }
-
-    CELULA* aux = *a;
-
-    while (aux->prox != NULL) aux = aux->prox;
-    aux->prox = b;
+    printf("%d ", temp->valor);
 }
 
-void printaValores(CELULA * lista) {
-    if(lista == NULL) return;
-    CELULA* aux = lista;
-    while (aux->prox != NULL) {
-        printf("%d ", aux->valor);
-        aux = aux->prox;
+cel *intercalar(cel *l1, cel *l2) {
+    cel *l3 = NULL;
+    cel *aux1 = l1;
+    cel *aux2 = l2;
+
+    while(aux1 != NULL || aux2 != NULL) {
+
+        if (aux1 != NULL) {
+            l3 = inserir(&l3, aux1->valor);
+            aux1 = aux1->prox;
+            //printf("insere1\n");
+        }
+
+        if (aux2 != NULL) {
+            l3 = inserir(&l3 , aux2->valor);
+            aux2 = aux2->prox;
+            //printf("%d\n", aux2->valor);
+        }
     }
-    printf("%d\n", aux->valor);
+    return l3;
 }
 
-void insereNaLista(CELULA ** lista, int novoValor) {
-    CELULA * nova = malloc(sizeof(CELULA));
-    nova->valor = novoValor;
 
-    if (lista != NULL) {
-
-        CELULA* aux = *lista;
-
-        while (aux->prox != NULL) aux = aux->prox;
-        aux->prox = nova;
-    } else {
-        *lista = nova;
-    }
+void imprimir(cel *lista) {
+    for (cel *aux = lista; aux != NULL; aux = aux->prox)
+        printf("%d\n", aux->valor);
 }
 
 int main() {
-    CELULA * lista = malloc(8);
-    insereNaLista(&lista, 8);
-    insereNaLista(&lista, 5);
-    insereNaLista(&lista, 10);
-    insereNaLista(&lista, 851);
+    cel *lst = NULL;
+    cel *lst2 = NULL;
+    cel *lst3 = NULL;
 
-    CELULA * lista2 = malloc(8);
-    insereNaLista(&lista2, 8789);
-    insereNaLista(&lista2, 147);
-    insereNaLista(&lista2, 123);
-    insereNaLista(&lista2, 159);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
+    inserir(&lst, 1);
 
-    printaValores(lista);
-    printaValores(lista2);
 
-    concatena(&lista,lista2);
+    inserir(&lst2, 2);
+    inserir(&lst2, 22);
+    inserir(&lst2, 222);
+    inserir(&lst2, 2222);
 
-    printaValores(lista);
-    printaValores(lista2);
+
+    lst3 = intercalar(lst, lst2);
+    imprimir(lst3);
+    printf("oi");
+
 }
