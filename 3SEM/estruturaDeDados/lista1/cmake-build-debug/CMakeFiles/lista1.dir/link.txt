@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/lista1.dir/1.c.o  -o lista1 

@@ -1,0 +1,73 @@
+// Lista 3 Ex. 1
+CELULA * intercala(CELULA * lista1, CELULA* lista2) {
+    CELULA *lista3 = lista1;
+    CELULA *aux = NULL;
+    CELULA *aux2 = NULL;
+    while(lista3->prox != NULL && lista2->prox != NULL){
+        aux = lista3->prox;
+        lista3 -> prox = lista2;
+        lista3 = lista3-> prox;
+        aux2 = lista3->prox;
+        lista3->prox = aux;
+        lista2 = aux2;
+    }
+    if (lista3->prox == NULL) {
+        lista3->prox = lista2;
+    }
+    return lista3;
+}
+
+// Lista 3 Ex. 2
+void inserirNaListaDupla(CELULA ** lista, int valor) {
+    CELULA *nova = malloc(sizeof(CELULA_DUPLA));
+    nova->valor = valor;
+    nova->anterior = NULL;
+    nova->prox = NULL;
+
+    if(*lista == NULL) {
+        *lista = nova;
+        return;
+    }
+    
+    CELULA *aux = *lista;
+    for(; aux->prox != NULL; aux = aux->prox);
+    nova->anterior = aux;
+    aux->prox = nova;
+}
+
+// Lista 3 Ex. 3
+int simulaInspecao() {
+    int horas = 8;
+    int minutosTotal = horas * 60;
+    
+    int qtdTv = 0;
+    int qtdTvsFixed = 0;
+    int tempoConsertando = 0;
+    for(int minutos = 1; minutos < minutosTotal; minutos++) {
+        if(tempoConsertando == 4) {
+            tempoConsertando = 0;
+            qtdTvsFixed++;
+            qtdTv--;
+        } 
+        if(minutos%3 == 0) {
+            qtdTv++;
+        }
+        if(qtdTv >= 1) {
+            tempoConsertando++;
+        }
+    }
+
+    return qtdTvsFixed;
+}
+
+// Lista 3 Ex. 4
+int simulaTTT(int v[], int topo) {
+    int soma = 0;
+    if(topo==0) return soma;
+    for(; topo > 0; topo--) {
+        if(v[topo] != 0) {
+            soma += v[topo];
+        }
+    }
+    return soma;
+}
