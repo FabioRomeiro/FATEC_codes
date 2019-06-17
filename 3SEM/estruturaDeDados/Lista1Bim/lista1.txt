@@ -81,7 +81,7 @@ CELULA *intercala( CELULA *lista1, CELULA *lista2 ){
     CELULA *lista3 = malloc(sizeof(CELULA));
     lista3->prox = NULL;
     aux = lista3;
-    while( (lista1 != NULL) || (lista2 != NULL) ){  
+    while( (lista1 != NULL) || (lista2 != NULL) ){
       if (lista1 != NULL){
         lista3 = insere(lista3, lista1->valor);
         lista1 = lista1->prox;
