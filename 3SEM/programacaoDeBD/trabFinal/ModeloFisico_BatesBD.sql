@@ -8,7 +8,6 @@ CREATE TABLE funcionario (
     CONSTRAINT funpk FOREIGN KEY (fun_gestor) REFERENCES funcionario(fun_num_documento)
 );
 
-
 CREATE TABLE cozinheiro (
     fun_num_documento NUMBER(10) PRIMARY KEY,
     coz_especialidade VARCHAR2(50),
@@ -23,23 +22,20 @@ CREATE TABLE camareira (
 
 CREATE TABLE CLIENTE (
 cli_nome varchar2(30) not null,
-cli_cpf number not null,
+cli_cpf number(11) not null,
 cli_dataNasc Date not null,
 cli_restricao_alimenticia varchar2(20),
 CONSTRAINT cli_pk primary key (cli_cpf)
 );
 
 create table RESERVA (
-res_id number not null,
-res_cli_cpf number not null,
+res_id number(10) not null,
+res_cli_cpf number(11) not null,
 res_data Date not null,
-res_checkin Date not null,
-res_checkout Date not null,
+res_checkin VARCHAR2(16),
+res_checkout VARCHAR2(16),
 CONSTRAINT res_pk primary key (res_id)
 );
-
-
-
 
 ALTER TABLE RESERVA ADD
 CONSTRAINT res_fk_cliente FOREIGN KEY (res_cli_cpf) REFERENCES CLIENTE(cli_cpf);
@@ -52,20 +48,17 @@ CONSTRAINT gua_pk primary key (gua_res_id, gua_qua_numero)
 
 CREATE TABLE BTS_BATES(
     BTS_CNPJ NUMBER(11),
-    BTS_HORARIO_CHECKIN DATE,
-    BTS_HORARIO_CHECKOUT DATE,
+    BTS_HORARIO_CHECKIN VARCHAR2(8),
+    BTS_HORARIO_CHECKOUT VARCHAR2(8),
     BTS_ENDERECO VARCHAR(100),
-
     CONSTRAINT BTSPK PRIMARY KEY (BTS_CNPJ)
 );
 
 CREATE TABLE AND_ANDAR(
     AND_NUMERO NUMBER(3),
     BTS_CNPJ NUMBER(11),
-
     CONSTRAINT ANDPK PRIMARY KEY (AND_NUMERO),
     CONSTRAINT ANDFK FOREIGN KEY (BTS_CNPJ) REFERENCES BTS_BATES(BTS_CNPJ)
-
 );
 
 create table QUARTO (
