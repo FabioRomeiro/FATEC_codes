@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09ce3a75-eb06-4b6c-b083-19a82b322e51" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/3SEM/estruturaDeDados/Lista1Bim/lista1.txt" afterPath="$PROJECT_DIR$/3SEM/estruturaDeDados/Lista1Bim/lista1.txt" />
-      <change beforePath="$PROJECT_DIR$/3SEM/programacaoDeBD/18.02.2019/TS_BD.DBF" afterPath="$PROJECT_DIR$/3SEM/programacaoDeBD/18.02.2019/TS_BD.DBF" />
-    </list>
+    <list default="true" id="09ce3a75-eb06-4b6c-b083-19a82b322e51" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +47,42 @@
             <path>
               <item name="FATEC_codes" type="b2602c69:ProjectViewProjectNode" />
               <item name="FATEC_codes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FATEC_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FATEC_codes" type="462c0819:PsiDirectoryNode" />
+              <item name="3SEM" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FATEC_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FATEC_codes" type="462c0819:PsiDirectoryNode" />
+              <item name="3SEM" type="462c0819:PsiDirectoryNode" />
+              <item name="estruturaDeDados" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FATEC_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FATEC_codes" type="462c0819:PsiDirectoryNode" />
+              <item name="3SEM" type="462c0819:PsiDirectoryNode" />
+              <item name="labBD3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FATEC_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FATEC_codes" type="462c0819:PsiDirectoryNode" />
+              <item name="3SEM" type="462c0819:PsiDirectoryNode" />
+              <item name="labBD3" type="462c0819:PsiDirectoryNode" />
+              <item name="RESTful_Java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FATEC_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FATEC_codes" type="462c0819:PsiDirectoryNode" />
+              <item name="3SEM" type="462c0819:PsiDirectoryNode" />
+              <item name="linguagemDeProgramacao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FATEC_codes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FATEC_codes" type="462c0819:PsiDirectoryNode" />
+              <item name="3SEM" type="462c0819:PsiDirectoryNode" />
+              <item name="programacaoDeBD" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
